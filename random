@@ -1,0 +1,13 @@
+import random, tsk, pygame
+pygame.init()
+drawing = True
+enemies = random.randint(1, 2)
+alien = tsk.Sprite("AlienBeetle.png", 100, 300)
+boulder = tsk.Sprite("Boulder.png", 450, 300)
+c = pygame.time.Clock()
+while drawing:
+    if enemies == 1:
+        alien.draw()
+    elif enemies == 2:
+        boulder.draw()
+    pygame.display.flip()
